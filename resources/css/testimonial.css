@@ -1,0 +1,185 @@
+.testimoniald {
+    margin-top: 5%;
+}
+.testimoniald h1 {
+    text-align: center;
+    color: #111;
+    font-weight: bold;
+}
+
+.testimoniald p {
+    text-align: center;
+    color: #111111b9;
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: Poppins;
+}
+
+.img-wrapper {
+    max-width: 100%;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.testimonialimg img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    #carouselExampleControls .carousel-inner {
+        display: flex;
+    }
+    #carouselExampleControls .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100% / 3);
+    }
+    .img-wrapper {
+        height: 23vw;
+    }
+}
+
+#carouselExampleControls .carousel-inner {
+    padding: 0.5em;
+}
+
+.testimonialcard {
+    margin: 1em;
+}
+#carouselExampleControls .carousel-control-prev,
+#carouselExampleControls .carousel-control-next {
+    width: 10vh;
+    height: 6vh;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent !important;
+    border: none;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+#carouselExampleControls .carousel-control-prev-icon,
+#carouselExampleControls .carousel-control-next-icon {
+    filter: invert(0%) brightness(0%); /* Makes the arrow black */
+}
+
+.testimonialimg {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonialimg img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Optional: Slight zoom effect */
+    object-fit: cover;
+}
+
+.card-body-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay color */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    font-size: 13px;
+}
+
+.card-body-overlay p {
+    color: rgba(255, 255, 255, 0.87);
+}
+/* Show overlay on hover */
+.testimonialimg:hover .card-body-overlay {
+    opacity: 1;
+}
+
+/* Optional: Slight zoom effect on hover */
+.testimonialimg:hover img {
+    transform: scale(1.05);
+}
+
+.card-body-overlay a {
+    position: relative;
+    background-color: #0048ca;
+    color: #ffff;
+    border-color: transparent;
+    right: 35%;
+    font-size: 12px;
+    margin: 0% 25% 0% 35%;
+}
+
+.card-body-overlay a:hover {
+    background-color: #0048ca;
+    opacity: 0.9;
+}
+
+/* Position the close button at the top left */
+.close-btn {
+    position: absolute;
+    top: -70px;
+    right: -350px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 70px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    background: transparent;
+    opacity: 0.8;
+}
+
+/* Make the modal transparent with no background */
+.modal-content {
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.modal-dialog {
+    max-width: 600px; /* Adjust this as needed */
+}
+
+#modalImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.alltestimonial a {
+    border-color: transparent;
+    margin-top: -5px;
+    margin-left: 45%;
+
+    font-size: 16px;
+    background-color: #0048ca;
+    color: white;
+    padding: 12px 24px;
+    z-index: 3;
+    border-radius: 50px;
+    font-weight: bold;
+}
+.alltestimonial a:hover {
+    background-color: #0048ca;
+    color: white;
+    opacity: 0.9;
+}

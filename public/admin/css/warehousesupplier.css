@@ -1,0 +1,35 @@
+/* Style for the logos in the select dropdown */
+select.select2 option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+select.select2 option img,
+select.select2 option .warehouse-logo-placeholder,
+select.select2 option .supplier-logo-placeholder {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Style for the text and address */
+select.select2 option strong {
+    font-weight: bold;
+}
+
+select.select2 option div.text-muted {
+    margin-top: 2px;
+}
+
+/* Make the option look neat */
+select.select2 option {
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+select.select2 {
+    font-size: 14px;
+}

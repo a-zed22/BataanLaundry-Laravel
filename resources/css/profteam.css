@@ -1,0 +1,63 @@
+.team-card {
+    position: relative;
+    height: 250px;
+    overflow: visible;
+    margin-top: 60px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #011f37;
+    border-color: 2px solid#e2e2e2;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    position: absolute;
+    top: -89px; /* Controls how much image overflows upward */
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.team-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-info h5 {
+    margin-bottom: 0.3rem;
+}
+
+.team-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Custom style for the horizontal dividers between Sales and Technical/Customer sections */
+.custom-hr {
+    border: 0; /* Remove default border */
+    height: 5px; /* Set the thickness of the line */
+    background-color: #0048ca; /* Set your desired color */
+    width: 100%; /* Set width of the line */
+    margin-bottom: -70;
+}
+
+/* Custom styles for Technical Team and Customer Relation Team */
+.custom-team-card {
+    height: 250px;
+    max-width: 350px; /* Adjust card width */
+    margin-top: 20%; /* Center the card */
+    margin-left: 15;
+}
+
+.custom-team-card img {
+    height: auto; /* Adjust image height */
+    width: 100%; /* Ensure the image fills the width of the container */
+    object-fit: cover; /* Keep image aspect ratio intact */
+    top: -100px; /* Controls how much image overflows upward */
+}
+
+/* Optional: Adjust the text/info area size if needed */
+.custom-team-info {
+    text-align: center;
+}

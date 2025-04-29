@@ -1,0 +1,875 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+    overflow-y: auto; /* Ensure this is NOT 'hidden' */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Carousel */
+.landing-carousel {
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    height: 100% !important;
+    overflow: hidden;
+    margin-top: -3%;
+}
+.slide1 {
+    position: absolute;
+    height: 95%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.landing-carousel img {
+    width: 100vw;
+    height: 100%;
+    filter: brightness(45%);
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Slight lift effect */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Overlay Text (Sits on Top of the Image) */
+.overlay-text {
+    position: relative;
+    top: 45%; /* Center vertically */
+    text-align: center;
+    margin-left: 27%;
+    z-index: 3;
+    width: 45%;
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s ease-out 1s forwards; /* 2s delay to match water animation */
+}
+
+/* Make the text transparent with an outline effect */
+.overlay-text h1 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffff; /* Text color */
+}
+
+.overlay-text h2 {
+    margin-bottom: 30;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffff; /* Text color */
+}
+
+.visit-button {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0048ca; /* Default Blue */
+    color: white; /* White Text */
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 19px;
+    font-weight: bold;
+    z-index: 3;
+    border-radius: 10px; /* Fully Rounded Corners */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1s forwards; /* 2s delay to match water animation */
+    border: 2px solid transparent; /* Invisible border to maintain size */
+}
+
+.visit-button:hover {
+    background-color: white; /* White Background */
+    color: #0048ca; /* Blue Text */
+}
+
+.container {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+/*Welcome Slider*/
+#carouselslider .carousel-indicators img {
+    width: 100px;
+    display: block;
+}
+
+#carouselslider .carousel-indicators button {
+    width: max-content !important;
+}
+
+#carouselslider .carousel-indicators button.active img {
+    border: 3px solid #0048ca;
+}
+
+#carouselslider .carousel-indicators {
+    position: unset;
+}
+
+.welcomecontainer {
+    display: flex;
+    background-color: #ffff;
+    margin: 2% 0% 1% 0%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    z-index: 10;
+}
+.welcometitle h1 {
+    text-align: center;
+    color: #111;
+    font-weight: bold;
+}
+.storephotos {
+    margin-left: 3%;
+    width: 100%;
+    margin-top: 5%;
+}
+#carouselslider .carousel-control-prev,
+#carouselslider .carousel-control-next {
+    width: 5vh;
+    height: 10vh;
+    top: 100%;
+    z-index: 10;
+    background: transparent !important;
+    border: none;
+}
+#carouselslider .carousel-control-prev-icon,
+#carouselslider .carousel-control-next-icon {
+    filter: invert(0%) brightness(0%); /* Makes the arrow black */
+}
+
+.welcomedescription {
+    width: 70%;
+    margin: 8% 3% 5% 3%;
+}
+
+.welcomedescription .ReadMore {
+    display: inline-block;
+    background-color: #007bff; /* Default Blue */
+    color: white; /* White Text */
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 19px;
+    z-index: 3;
+    border-radius: 10px; /* Fully Rounded Corners */
+    transition: all 0.3s ease;
+    margin-top: 0%; /* Adjust spacing */
+    border: 2px solid transparent; /* Invisible border to maintain size */
+}
+
+.welcomedescription .ReadMore {
+    background-color: #0048ca;
+    color: #ffff;
+}
+
+.welcomedescription .ReadMore:hover {
+    opacity: 0.9;
+}
+/*STORE INFORMATION*/
+.store-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%; /* Space between the text and the box */
+}
+
+.store-details {
+    width: 100%;
+    height: auto;
+    margin: 1% 10% 4% 10%;
+    width: 100%; /* Left side takes more space */
+}
+.store-details1 {
+    margin: 5% 10% 10% 10%;
+    width: 100%; /* Left side takes more space */
+}
+
+.store-details1 h1 {
+    margin-left: -90%;
+    width: 100%; /* Left side takes more space */
+}
+
+.store-info {
+    text-align: left;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    background-color: #003369;
+}
+
+.store-info h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.mainunderline {
+    width: 30%;
+    height: 5px;
+    background-color: #007bff;
+    margin-bottom: 20px;
+}
+
+.mainunderline1 {
+    margin-left: -89%;
+    width: 30%;
+    height: 5px;
+    background-color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Subsection Styling */
+.info-block {
+    margin-top: 30px;
+}
+
+.info-block h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.sub-underline {
+    width: 20%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+}
+
+.closed {
+    color: red;
+    font-weight: bold;
+}
+
+.info-box {
+    width: 200%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-left: -90%;
+    border-radius: 10px;
+    color: #111;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between; /* Spreads pricing sections evenly */
+    gap: 20px; /* Space between sections */
+}
+
+.pricing-info {
+    width: 50%; /* Each pricing section takes half */
+    text-align: left; /* Align text inside */
+}
+
+.pricing-info h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 7%;
+}
+
+.pricing-sub-underline {
+    width: 30%;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 10px;
+    margin-left: 7%;
+}
+
+.pricing-details h2 {
+    font-size: 16px;
+    color: #007bff;
+    margin-top: 10px;
+    margin-left: 7%;
+}
+
+.pricing-details p {
+    font-size: 12px;
+    color: #111;
+    line-height: 1.5;
+    margin-left: 7%;
+    margin-bottom: 5%;
+}
+
+/*PRODUCT CAROUSEL*/
+:root {
+    --item1-transform: translate(-100%, -5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translate(0, 0);
+    --item2-filter: blur(0);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(50%, 10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+}
+
+/*Carousel1*/ /*Product Carousel*/
+.carousel1 {
+    background-color: #011f37;
+    margin: 0% 0% 1% 0%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.carousel1-title h1 {
+    font-size: 40px;
+
+    font-weight: bold;
+    color: #ffff;
+    text-align: center;
+    align-items: center;
+}
+
+.prodlogocontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.prodlogocontainer .prodlogo1 img {
+    height: auto;
+    width: 14vw;
+    margin: 1.5vw 3vw 3vw 3vw;
+}
+
+.prodlogocontainer .prodlogo2 img {
+    margin: 1.5vw 3vw 3vw 3vw;
+    width: 8vw;
+    height: auto;
+}
+.allproduct {
+    border-color: transparent;
+    margin-left: 42%;
+    font-weight: bold;
+    background-color: #0048ca;
+    color: white;
+    padding: 12px 24px;
+    z-index: 3;
+    border-radius: 50px;
+}
+.allproduct:hover {
+    opacity: 0.9;
+}
+.carousel1 .list {
+    position: absolute;
+    top: 10%;
+    width: 1140px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+}
+.carousel1 .list .item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+}
+.carousel1 .list .item img {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel1 .list .item .detail {
+    opacity: 0;
+    pointer-events: none;
+    color: #ffff;
+}
+.carousel1 .list .item .intro {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel1 .list .item:nth-child(2) .intro {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+.carousel1 .list .item:nth-child(n + 6) {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel1 .list .item:nth-child(2) {
+    transform: var(--item2-transform);
+    filter: var(--item2-filter);
+    z-index: var(--item2-zIndex);
+    opacity: var(--item2-opacity);
+}
+
+.carousel1 .list .item:nth-child(1) {
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    z-index: var(--item1-zIndex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+.carousel1 .list .item:nth-child(3) {
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-zIndex);
+    opacity: var(--item3-opacity);
+    pointer-events: none;
+}
+
+/*Arrows*/
+.arrows {
+    position: absolute;
+    width: 1140px;
+    max-width: 90%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#next,
+#prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: monospace;
+    border: 1.5px solid #2e2c2c75;
+    font-size: large;
+    bottom: 50%;
+    left: 10%;
+    color: black;
+    font-weight: bold;
+}
+
+#back {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: monospace;
+    border: 1.5px solid #2e2c2c75;
+    color: black;
+    font-size: large;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#carousel-page {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 0 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.carousel1 .list .item .intro .product-title {
+    font-size: 1em;
+    color: #ffff;
+}
+.carousel1 .list .item .intro .product-topic {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: #ffff;
+}
+.carousel1 .list .item .intro .product-description {
+    font-size: small;
+    color: #ffff;
+}
+.carousel1 .list .item .intro .seeMore {
+    background-color: transparent;
+    border-bottom: 2px solid #00d1ff;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: #00d1ff;
+    font-weight: 1.5em;
+    margin-top: 1.2em;
+    border-radius: 3%;
+    text-align: left;
+}
+
+.carousel1 .list .item .intro .seeMore:hover {
+    font-weight: 500;
+}
+
+.carousel1 .list .item:nth-child(2) .intro .product-title,
+.carousel1 .list .item:nth-child(2) .intro .product-topic,
+.carousel1 .list .item:nth-child(2) .intro .product-description,
+.carousel1 .list .item:nth-child(2) .intro .seeMore {
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+@keyframes showContent {
+    from {
+        transform: translateY(50px);
+        filter: blur(30px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.carousel1 .list .item:nth-child(2) .intro .product-topic {
+    animation-delay: 0.9s;
+}
+.carousel1 .list .item:nth-child(2) .intro .product-description {
+    animation-delay: 1.1s;
+}
+.carousel1 .list .item:nth-child(2) .intro .seeMore {
+    animation-delay: 1.3s;
+}
+
+/* Next Click Effect */
+.carousel1.next .list .item:nth-child(1) {
+    animation: positionItem2 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes positionItem2 {
+    from {
+        transform: var(--item2-transform);
+        filter: var(--item2-filter);
+        z-index: var(--item2-zIndex);
+        opacity: var(--item2-opacity);
+    }
+}
+.carousel1.next .list .item:nth-child(2) {
+    animation: positionItem3 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes positionItem3 {
+    from {
+        transform: var(--item3-transform);
+        filter: var(--item3-filter);
+        z-index: var(--item3-zIndex);
+        opacity: var(--item3-opacity);
+    }
+}
+
+/* Prev Click Effect */
+.carousel1.prev .list .item:nth-child(2) {
+    animation: positionItem1 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes positionItem1 {
+    from {
+        transform: var(--item1-transform);
+        filter: var(--item1-filter);
+        z-index: var(--item1-zIndex);
+        opacity: var(--item1-opacity);
+    }
+}
+.carousel1.prev .list .item:nth-child(3) {
+    animation: positionItem2 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes positionItem2 {
+    from {
+        transform: var(--item2-transform);
+        filter: var(--item2-filter);
+        z-index: var(--item2-zIndex);
+        opacity: var(--item2-opacity);
+    }
+}
+
+/* showDetaiil Effect */
+.carousel1 .list .item {
+    transition: left 0.5s, opacity 0.5s, width 0.5s;
+}
+
+.carousel1.showDetail .list .item:nth-child(3) {
+    left: 10%;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel1.showDetail .list .item:nth-child(2) {
+    width: 100%;
+}
+.carousel1.showDetail .list .item:nth-child(2) .intro {
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel1 .list .item:nth-child(2) img {
+    transition: right 0.5s;
+}
+.carousel1.showDetail .list .item:nth-child(2) img {
+    right: 60%;
+}
+.carousel1.showDetail .list .item:nth-child(2) .detail {
+    opacity: 1;
+    pointer-events: auto;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel1.showDetail .list .detail .product-title {
+    font-size: 0em;
+}
+.carousel1.showDetail .list .detail .product-topic {
+    font-size: 2.9em;
+}
+.carousel1.showDetail .list .detail .specifications {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-top: 2px solid #ffff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.carousel1.showDetail .list .detail .specifications div {
+    width: 130px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.carousel1.showDetail .list .detail .specifications div p:nth-child(1) {
+    margin-top: 5%;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.carousel1.showDetail .list .item .detail .checkout button:nth-child(1) {
+    border: 0px solid #555;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    z-index: 3;
+    border-radius: 50px;
+    cursor: auto;
+}
+.carousel1.showDetail .list .item .detail .checkout button:nth-child(2) {
+    border: 0px solid #555;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #111;
+    padding: 12px 24px;
+    z-index: 3;
+    border-radius: 50px;
+    cursor: auto;
+}
+.carousel1.showDetail .list .item .detail .checkout button:hover {
+    opacity: 0.9; /* Dark Background */
+}
+.carousel1.showDetail .list .item:nth-child(2) .detail .product-topic,
+.carousel1.showDetail .list .item:nth-child(2) .detail .product-description,
+.carousel1.showDetail .list .item:nth-child(2) .detail .specifications,
+.carousel1.showDetail .list .item:nth-child(2) .detail .checkout,
+.carousel1.showDetail #back {
+    opacity: 0;
+    animation: showContent 0.5s ease-in-out 1 forwards;
+}
+.carousel1.showDetail .list .item:nth-child(2) .detail .product-description {
+    animation-delay: 0.8s;
+}
+.carousel1.showDetail .list .item:nth-child(2) .detail .specifications {
+    animation-delay: 0.9s;
+}
+.carousel1.showDetail .list .item:nth-child(2) .detail .checkout {
+    animation-delay: 1s;
+}
+
+.carousel1.showDetail #next,
+.carousel1.showDetail #prev,
+.carousel1.showDetail h1 {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.carousel1.showDetail #back {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel1::before {
+    width: 500px;
+    height: 300px;
+    content: "";
+    background-image: linear-gradient(30deg, #245379, #8db3d3);
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    opacity: 0.4;
+    filter: blur(150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    transition: 1s;
+}
+.carousel1.showDetail::before {
+    transform: translate(-100%, -50%) rotate(70deg);
+}
+
+/*Choose Us Section*/
+
+.ChooseUs {
+    margin-top: 5%;
+}
+.ChooseUs h1 {
+    text-align: left;
+    font-size: 30px;
+}
+
+.BrandName {
+    background: linear-gradient(360deg, #007bff, #00d4ff); /* Blue gradient */
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensures background applies to text only */
+}
+
+.Underline {
+    width: 20%;
+    height: 5px;
+    background-color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Container for cards */
+.card-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: default;
+}
+
+/* Card styling */
+.card {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #ffff;
+    text-align: center;
+}
+
+/* Title */
+.card h3 {
+    text-align: center;
+    margin: 50px 30px;
+    font-size: 18px;
+    color: #003369;
+    position: center;
+    left: 50;
+    left: 30;
+    z-index: 2;
+}
+/* Circular icon styling */
+.card .icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #003369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    background: transparent;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -15%;
+    margin-top: 50px;
+    background: transparent;
+}
+
+.card .icon-container img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+/* Hover overlay effect */
+.card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #003369; /* Green overlay */
+    transition: height 0.4s ease-in-out;
+}
+
+/* Card content (hidden by default) */
+.card p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 80%;
+    z-index: 2;
+    text-align: left;
+    top: 30%;
+}
+
+/* Hover effect */
+.card:hover::before {
+    height: 100%;
+}
+
+.card:hover p {
+    position: center;
+    opacity: 1;
+}
+.card:hover .icon-container,
+.card:hover h3 {
+    opacity: 0;
+}

@@ -1,0 +1,61 @@
+/*3D Carousel Slider*/
+
+#carousel3D .carousel-indicators button {
+    width: 50px;
+    display: flex;
+    background-color: #111;
+}
+#carousel3D .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Container3D {
+    display: flex;
+    background-color: #ffff;
+    margin: 2% 0% 1% 0%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    z-index: 10;
+}
+.welcometitle {
+    margin-top: 5%;
+}
+.welcometitle h1 {
+    text-align: center;
+    color: #111;
+    font-weight: bold;
+}
+
+.welcometitle p {
+    text-align: center;
+    color: #111111b9;
+    width: 90%;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.Photos3D {
+    position: relative;
+    margin: 3% 3% 5% 3%;
+    height: 90%;
+    width: 100%;
+}
+#carousel3D .carousel-control-prev,
+#carousel3D .carousel-control-next {
+    width: 5vh;
+    height: 10vh;
+    top: 50%;
+    z-index: 10;
+    background: transparent !important;
+    border: none;
+    margin-left: 5px;
+    margin-right: -px;
+}
+#carousel3D .carousel-control-prev-icon,
+#carousel3D .carousel-control-next-icon {
+    filter: invert(0%) brightness(0%); /* Makes the arrow black */
+}
